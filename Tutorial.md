@@ -140,7 +140,7 @@ x = 3
 y = 4
 z = x + y
 ```
-But we can also use Unicode characters. Let's take the angles of a unit cell alpha, beta and gamma and assign them values 90, 90 and 120 respectively. To get the unicode characters we type exactly the same thing as we would do if we were writing a document in _Latex_. So to get alpha, we would type "\alpha". Once we've typed that press the _tab_ key and Bob's your uncle, we should see α.
+But we can also use Unicode characters. Let's take the angles of a unit cell alpha, beta and gamma and assign them values 90, 90 and 120 respectively. To get the unicode characters we type exactly the same thing as we would do if we were writing a document in _Latex_. So to get alpha, we would type "\\alpha". Once we've typed that press the _tab_ key and Bob's your uncle, we should see α.
 To assign all three variables in one line we would write:
 ```julia
 α, β, γ = 90, 90, 120
