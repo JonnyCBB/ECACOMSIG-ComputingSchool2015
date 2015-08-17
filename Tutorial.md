@@ -403,11 +403,11 @@ In fact we can use this to view the methods of **ALL** Julia functions.
 * Create a new type for a Reflection object. It should have fields for
     * Miller indices (hkl)
     * Whether it is Centric
-    * And it's $\varepsilon$ factor. (Also known as the expected intensity factor. All you need to worry about is that it's just a positive integer).
+    * And it's ɛ factor. (Also known as the expected intensity factor. All you need to worry about is that it's just a positive integer).
 Don't worry if you're not sure about what the terms mean. All we're concerned about here is that you are able to define a _Composite type_ in Julia and annotate each field.
 
 #####Extension Exercise  
-Given that rotation of point (x,y,z) around the $z$-axis of an angle $\theta$ is given by the matrix multiplication $$ \left(\begin{matrix}
+Given that rotation of point (x,y,z) around the z-axis of an angle θ is given by the matrix multiplication $$ \left(\begin{matrix}
   \cos(\theta) & -\sin(\theta) & 0 \\
   \sin(\theta) & \cos(\theta)  & 0 \\
   0            & 0             & 1
@@ -416,7 +416,7 @@ Given that rotation of point (x,y,z) around the $z$-axis of an angle $\theta$ is
    y \\
    z
   \end{matrix}\right) $$
-Write a function that takes in an angle of rotation $\theta$ and an Atom array and rotates all of the atoms in the array around the $z-axis$. The function does not explicitly have to return anything, it just has to print the coordinates of the transformed atom positions.
+Write a function that takes in an angle of rotation θ and an Atom array and rotates all of the atoms in the array around the z-axis. The function does not explicitly have to return anything, it just has to print the coordinates of the transformed atom positions.
 
 ##Plotting in Julia
 Plotting is an essential part of the data analysis process. There are a few plotting libraries for Julia but the one we're going to use in this tutorial is [Gadfly](http://gadflyjl.org/). Gadfly is a system for plotting and visualization based largely on Hadley Wickhams's ggplot2 for R, and Leland Wilkinson's book The Grammar of Graphics. So if you're familiar with R's ggplot2 then you'll feel right at home.
@@ -429,18 +429,18 @@ If you are using JuliaBox then the Package has already been installed. If you ha
 julia> Pkg.init() #This initializes the package repository on your local machine if it hasn't been done already
 julia> Pkg.add("Gadfly") #Any packages that Gadfly is dependent on will automatically be installed as well if they haven't been installed already
 ```
-**Note:** One of the cool things about the Julia language is that it has a built-in package manager. Notice that we organised our package repository within a Julia terminal, **not** a system terminal. So we don't need external distributions (such as Anaconda, Canopy or Python(x,y)) to organise the package management for us. All packages are hosted on [Github](https://github.com/) and you can see all registered packages on the [Julia Packages page.](http://pkg.julialang.org/)
+**Note:** One of the cool things about the Julia language is that it has a built-in package manager. Notice that we organised our package repository within a Julia terminal, **not** a system terminal. So we don't need external distributions (such as Anaconda, Canopy or Python(x,y) for Python) to organise the package management for us. All packages are hosted on [Github](https://github.com/) and you can see all registered packages on the [Julia Packages page.](http://pkg.julialang.org/)
 
 ###Plotting Functions
 Now that _Gadfly_ has been installed we need to import it in our current Julia session. We can do this by typing the following (Gadfly takes a little while for the first plot)
 ```julia
 using Gadfly
 ```
-so let's think of something to plot. How about plotting the sine function between $0$ and $2\pi$
+so let's think of something to plot. How about plotting the sine function between 0 and 2π
 ```julia
 plot(sin, 0, 2π)
 ```
-Notice that we haven't needed to import anything to use the sine function (unlike for Python). This is because has been developed with the needs of scientific/technical developers in mind and hence the sine function, along with many other commonly used scientific/mathematical functions, is included in the standard library. For a full list see the [Julia Standard Library page.](http://julia.readthedocs.org/en/latest/stdlib/)
+Notice that we haven't needed to import anything to use the sine function (unlike for Python). This is because Julia has been developed with the needs of scientific/technical developers in mind and hence the sine function, along with many other commonly used scientific/mathematical functions, is included in the standard library. For a full list see the [Julia Standard Library page.](http://julia.readthedocs.org/en/latest/stdlib/)
 
 The other thing to notice is that Gadfly uses a [D3](http://d3js.org/) backend so the plots are interactive. Try dragging and zooming in and out of the plot.
 
@@ -454,7 +454,7 @@ In fact we can plot our own functions as well.
 
 ###Plotting Arrays
 Sometimes we don't get to work with functions and we have arrays of values to work with. Gadfly allows us to plot arrays too.
-Let's plot the Bessel function of the first kind of order zero between 0 and 10 (this comes up when we deal with conditional probability distributions of Structure Factors amplitudes, namely the Rice distribution). And yes the Bessel functions are all included in the standard liibrary.
+Let's plot the Bessel function of the first kind of order zero between 0 and 10 (this comes up when we deal with conditional probability distributions of Structure Factors amplitudes, namely the Rice distribution). And yes the Bessel functions are all included in the standard library.
 ```julia
 xData = linspace(0,10,100) #create 100 linearly spaced points between 0 and 10
 yData = besselj0(xData)
@@ -486,14 +486,14 @@ Let's plot a histogram that is binned by the price of the diamond.
 ```julia
 plot(df, x="Price", Geom.histogram)
 ```
-This is fine but we may also want to colour the diamonds by the type of cut and set the number of bins ourself (let's say 50 bins). Then we would write
+This is fine but we may also want to colour the diamonds by the type of cut and set the number of bins ourselves (let's say 50 bins). Then we would write
 ```julia
 plot(df, x="Price", color="Cut", Geom.histogram(bincount=50))
 ```
 As previously mentioned, Gadfly has many more plotting capabilities and the information can be found on the [main page](http://gadflyjl.org/) or from the [Github repository]((https://github.com/dcjones/Gadfly.jl))
 
 ## Calling Python from Julia
-There are many useful libraries in other languages that we can make use of with in Julia using very simple APIs. In this tutorial we're going to conern ourselves with calling Python libraries.
+There are many useful libraries in other languages that we can make use of with in Julia using very simple APIs. In this tutorial we're going to concern ourselves with calling Python libraries.
 
 #####Installing PyCall
 If you are not using Julia box then you'll need to make sure you have _PyCall_ installed. You can do this by executing
@@ -516,7 +516,7 @@ Now we can use the numpy module as we would as if we were in Python. The PyCall 
 ```julia
 juliaArrayObject = np.array([1,2,3])
 ```
-The JuliaBox tutorial has the following example where they solve a transcendental equation to find a root of $f(x) = \cos(x) - x$
+The JuliaBox tutorial has the following example where they solve a transcendental equation to find a root of f(x) = cos(x) - x
 ```julia
 @pyimport scipy.optimize as so
 function f(x)
@@ -576,7 +576,7 @@ Finally let's check that we can use our object to obtain some information about 
 * How many helices are in chain A?
 * What are the starting residues and end residues of each Helix in chain A?
 
-Finally think about whether you think this PDB tool is sufficient for the needs of the crystallographic community. If you think it could be better, what would you change? Do the data structures need to be different? What information would you extract?
+Finally think about whether you think this PDB tool is sufficient for the needs of the crystallographic community. If you think it could be better, what would you change? Do the data structures need to be different? What information would you extract?   
 
 Congratulations! You have finished the tutorial on Julia. I hope you enjoyed it and I hope you have learned how easy Julia can be to use. Maybe you will start using Julia for you own work. Who knows?
 
