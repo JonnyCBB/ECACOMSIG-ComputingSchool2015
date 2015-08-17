@@ -541,7 +541,7 @@ The next step is to use the Package PDBTool. To make sure that we have the packa
 ```julia
 Pkg.init() #This initializes the Package repository to store all of your installed Julia packages
 Pkg.add("PdbTool") #This installs the PdbTool package.
-using PDBTool #Loads the package for the current Julia session
+using PdbTool #Loads the package for the current Julia session
 ```
 Information about how to use PDBTool is contained in the [Github repository for the package](https://github.com/christophfeinauer/PdbTool.jl).
 
@@ -576,7 +576,7 @@ Finally let's check that we can use our object to obtain some information about 
 * How many helices are in chain A?
 * What are the starting residues and end residues of each Helix in chain A?
 
-Finally think about whether you think this PDB tool is sufficient for the needs of the crystallographic community. If you think it could be better, what would you change? Do the data structures need to be different? What information would you extract?   
+Finally think about whether you think this PDB tool is sufficient for the needs of the crystallographic community. If you think it could be better, what would you change? Do the data structures need to be different? What information would you extract?
 
 Congratulations! You have finished the tutorial on Julia. I hope you enjoyed it and I hope you have learned how easy Julia can be to use. Maybe you will start using Julia for you own work. Who knows?
 
