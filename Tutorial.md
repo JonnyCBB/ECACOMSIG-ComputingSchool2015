@@ -65,10 +65,10 @@ This will take you to an _**IJulia Notebook**_ where you can start using and exe
  ```julia
  print("Hello World!")
  ```
-into the cell and then hold **Ctrl/Cmd and press enter** (I will shorthand this by writing **Ctrl/Cmd-Enter**) then the code should run and you should see `Hello World!` printed below.
+into the cell and then hold **Ctrl and press enter** (I will shorthand this by writing **Ctrl-Enter**) then the code should run and you should see `Hello World!` printed below.
 Congratulations! You've just run your first Julia program **AND** you know how to execute code in an IJulia Notebook.
 
-The problem is that we don't just want that one cell for the entire tutorial (I hope that you are excited to learn Julia and want to execute more than 1 line of code), we want to get to the next cell. To do this instead of doing _Ctrl/Cmd-Enter_ we should type **Shift-Enter** instead. This command executes code and moves to the next cell.
+The problem is that we don't just want that one cell for the entire tutorial (I hope that you are excited to learn Julia and want to execute more than 1 line of code), we want to get to the next cell. To do this instead of doing _Ctrl-Enter_ we should type **Shift-Enter** instead. This command executes code and moves to the next cell.
 The toolbar at the top has a list of the things that you can do with the cells and more. If you are more into your keyboards shortcuts then you can search for them in Google to get a list.
 
 But now we are ready to start learning Julia.
