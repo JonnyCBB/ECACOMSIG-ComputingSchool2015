@@ -353,7 +353,7 @@ This delay is due to Julia **compiling the function** on it's first run (or more
 Because it compiles the method it doesn't matter what vales you put in to the `+` function the second time around, as long as the types are the same, Julia will execute the code much faster. So when benchmarking the time that Julia takes to run code, don't take the first run seriously because that includes compile time.
 
 ###### Note 2
-Since Julia infers the types of the values, annotating functions with the types of the input arguments doesn't necessarily improve the perfomance. So the annotations are optional, but they are good to let other people know explicitly what inputs arguments are expected. So I personally would encourage the use of them if they don't make the code unreadable.
+Since Julia infers the types of the values, annotating functions with the types of the input arguments doesn't necessarily improve the perfomance. So the annotations are optional, but they are good to let other people know explicitly what inputs arguments are expected. So I personally would encourage function annotation if they don't make the code unreadable.
 
 ### Composite types
 These are the closest you'll get to defining the structure of objects in classes in traditional object oriented languages. If you are familiar with _structs_ in C or Matlab then Composite types are essentially identical.
@@ -432,7 +432,7 @@ julia> Pkg.add("Gadfly") #Any packages that Gadfly is dependent on will automati
 **Note:** One of the cool things about the Julia language is that it has a built-in package manager. Notice that we organised our package repository within a Julia terminal, **not** a system terminal. So we don't need external distributions (such as Anaconda, Canopy or Python(x,y)) to organise the package management for us. All packages are hosted on [Github](https://github.com/) and you can see all registered packages on the [Julia Packages page.](http://pkg.julialang.org/)
 
 ###Plotting Functions
-Now that _Gadfly_ has been installed we need to import it in our Julia current Julia session. We can do this by typing the following (Gadfly takes a little while for the first plot)
+Now that _Gadfly_ has been installed we need to import it in our current Julia session. We can do this by typing the following (Gadfly takes a little while for the first plot)
 ```julia
 using Gadfly
 ```
