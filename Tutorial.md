@@ -537,20 +537,20 @@ Currently there is only one registered Julia Package that reads PDB files. We're
 
 Let's take a simple PDB file - 2BN3. Go to the [RCSB Protein Databank main page](http://www.rcsb.org/pdb/home/home.do), type "2bn3" into the search bar and press enter. This should take you to the [2BN3 structure](http://www.rcsb.org/pdb/explore/explore.do?structureId=2bn3). On the right hand side of the page, click on "_Display files_" and from the drop down list select "_PDB File_". Copy the contents of the file. Now go back to the JuliaBox directory where you have opened your Julia session (not the Julia notebook) and click "_New_" and from the drop down list select "_Text File_". This will take you to an empty file. Paste the contents of the PDB file into the empty text file and save the file (Click "File" on the toolbar at the top of the screen and then click "save"). You can rename the file by double clicking "Untitled.txt" at the top of the screen. Now you should have the contents of a PDB file in the current directory.
 
-The next step is to use the Package PDBTool. To make sure that we have the package installed and loaded prior to using it, we'll need to execute the following commands
+The next step is to use the Package PdbTool. To make sure that we have the package installed and loaded prior to using it, we'll need to execute the following commands
 ```julia
 Pkg.init() #This initializes the Package repository to store all of your installed Julia packages
 Pkg.add("PdbTool") #This installs the PdbTool package.
 using PdbTool #Loads the package for the current Julia session
 ```
-Information about how to use PDBTool is contained in the [Github repository for the package](https://github.com/christophfeinauer/PdbTool.jl).
+Information about how to use PdbTool is contained in the [Github repository for the package](https://github.com/christophfeinauer/PdbTool.jl).
 
 We have learnt enough at this point in the tutorial to read information and understand enough Julia syntax to read and understand the information and code in this package. By the end of this section I want you to have achieved something. I want you to feel that you've learnt enough Julia to start exploring and understanding other people's source code in officially registered Julia packages. This is a great step and demonstrates how simple (and powerful) the Julia language can be. So here's where you are off into the world of Julia on your own with less guidance.
 So let the exercises commence:
 
-* Read the PDB file using the PDB Tool package - the information given on the first page of the [PDBTool Github repository](https://github.com/christophfeinauer/PdbTool.jl) should help.
+* Read the PDB file using the PdbTool package - the information given on the first page of the [PdbTool Github repository](https://github.com/christophfeinauer/PdbTool.jl) should help.
 
-Now let's delve into the source code to see what's going on under the hood. At the top of the repository you should see a folder named "_src_" which stands for _source_. Click on that folder. Since we had to use the "PDBTool" module to read the PDB file, the relevant code to read the PDB must be contained in the "**PDBTool.jl**" file. Click on that file and we should see some Julia code. Let's analyse this code.
+Now let's delve into the source code to see what's going on under the hood. At the top of the repository you should see a folder named "_src_" which stands for _source_. Click on that folder. Since we had to use the "PdbTool" module to read the PDB file, the relevant code to read the PDB must be contained in the "**PdbTool.jl**" file. Click on that file and we should see some Julia code. Let's analyse this code.
 
 The first line of uncommented code begins with`module PdbTool`. These are how modules are made and just like all other statements, they are finished with `end`.
 Generally the bulk of a module will contain type definitions and functions. Usually the type definitions are stated first and then the functions make up the rest of the module.
@@ -576,7 +576,7 @@ Finally let's check that we can use our object to obtain some information about 
 * How many helices are in chain A?
 * What are the starting residues and end residues of each Helix in chain A?
 
-Finally think about whether you think this PDB tool is sufficient for the needs of the crystallographic community. If you think it could be better, what would you change? Do the data structures need to be different? What information would you extract?
+Finally think about whether you think this PdbTool is sufficient for the needs of the crystallographic community. If you think it could be better, what would you change? Do the data structures need to be different? What information would you extract?
 
 Congratulations! You have finished the tutorial on Julia. I hope you enjoyed it and I hope you have learned how easy Julia can be to use. Maybe you will start using Julia for you own work. Who knows?
 
