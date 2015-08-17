@@ -537,9 +537,11 @@ Currently there is only one registered Julia Package that reads PDB files. We're
 
 Let's take a simple PDB file - 2BN3. Go to the [RCSB Protein Databank main page](http://www.rcsb.org/pdb/home/home.do), type "2bn3" into the search bar and press enter. This should take you to the [2BN3 structure](http://www.rcsb.org/pdb/explore/explore.do?structureId=2bn3). On the right hand side of the page, click on "_Display files_" and from the drop down list select "_PDB File_". Copy the contents of the file. Now go back to the JuliaBox directory where you have opened your Julia session (not the Julia notebook) and click "_New_" and from the drop down list select "_Text File_". This will take you to an empty file. Paste the contents of the PDB file into the empty text file and save the file (Click "File" on the toolbar at the top of the screen and then click "save"). You can rename the file by double clicking "Untitled.txt" at the top of the screen. Now you should have the contents of a PDB file in the current directory.
 
-The next step is to use the Package PDBTool. We do this in the usual way
+The next step is to use the Package PDBTool. To make sure that we have the package installed and loaded prior to using it, we'll need to execute the following commands
 ```julia
-using PDBTool
+Pkg.init() #This initializes the Package repository to store all of your installed Julia packages
+Pkg.add("PdbTool") #This installs the PdbTool package.
+using PDBTool #Loads the package for the current Julia session
 ```
 Information about how to use PDBTool is contained in the [Github repository for the package](https://github.com/christophfeinauer/PdbTool.jl).
 
