@@ -2,8 +2,9 @@
 
 This brief introduction to **Julia** is designed to _familiarize_ you with the basic concepts and syntax of the language. By no means is this a comprehensive introduction. The idea is simply to show that Julia can be very powerful without requiring a comprehensive introduction.
 
-Since this tutorial has been designed for the _ECM29 Crystallography computing
-school_, the focus is going to be on **crystallographic problems** with the assumption that the user is quite familiar with programming basics (and advanced to some extent) in another programming language.
+Since this tutorial has been designed for the _ECM29 Crystallography computing school_, the focus is going to be on **crystallographic problems** with the assumption that the user is quite familiar with programming basics (and advanced to some extent) in another programming language.
+
+> Note: The full materials (the IJulia notebooks and a link to the Prezi slides used at the compting school) are available on my Github repository: [https://github.com/JonnyCBB/ECACOMSIG-ComputingSchool2015](https://github.com/JonnyCBB/ECACOMSIG-ComputingSchool2015)
 
 In the course of this tutorial we will cover:
 <!-- TOC depth:6 withLinks:1 updateOnSave:1 orderedList:0 -->
@@ -53,7 +54,7 @@ You'll then be taken to a page that looks like this
 
 You won't have the same files but you should see the _tutorial_ folder there. This folder contains more information about the Julia language and is an excellent resource if you want to know more.
 
-But I want you to **Click on the "New" drop down box** in the top right of the screen (as seen in the screen shot) and **select "Julia 0.3.9"** from the list.
+But I want you to **Click on the "New" drop down box** in the top right of the screen (as seen in the screen shot) and **select "Julia 0.3.11"** from the list.
 This will take you to an _**IJulia Notebook**_ where you can start using and executing Julia code. It should look like this
 
  ![IJuliaNotebook](figures/EmptyNotebook.png)
